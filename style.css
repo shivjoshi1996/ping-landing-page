@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 100%;
+}
+
+
+h1 {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+   
+}
+
+.logo {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.logo img {
+    width: 30%;
+}
+
+.subheading {
+    padding-top: 20px;
+    font-size: 16px;
+}
+
+input[type=email], select {
+    width: 100%;
+    padding: 10px;
+    padding-left: 30px;
+    margin: 8px 0;
+    color: hsl(223, 100%, 88%);
+    border: 1px solid hsl(223, 100%, 88%);
+    border-radius: 100px;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: hsl(223, 87%, 63%);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .screenshot img{
+      width: 80vw;
+  }
+
+  .social-media {
+      width: 200px ;
+      display: flex;
+      justify-content: space-evenly;
+      color: hsl(223, 87%, 63%);
+  }
