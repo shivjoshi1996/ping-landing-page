@@ -3,12 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Libre Franklin', sans-serif;
-    font-size: 100%;
+    font-size: 1em;
 }
 
 
 h1 {
-    font-size: 23px;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
@@ -24,37 +24,39 @@ h1 {
 }
 
 .logo {
-    padding-top: 50px;
-    padding-bottom: 30px;
+    padding-top: 5em;
+    padding-bottom: 2em;
 }
 
 .logo img {
-    width: 25%;
+    width: 20%;
 }
 
 
-.subheading {
-    padding-top: 15px;
-    font-size: 16px;
-    padding-bottom: 20px;
+header p {
+    font-size: 0.8rem;
+    padding-top: 1.2em;
+    padding-bottom: 1.5em;
 }
 
 input[type=email], select {
     width: 100%;
-    padding: 10px;
-    padding-left: 30px;
-    margin: 8px 0;
+    padding: 1em;
+    padding-left: 2em;
+    margin: 0.5em 0;
     color: hsl(223, 100%, 88%);
     border: 1px solid hsl(223, 100%, 88%);
     border-radius: 100px;
     margin-bottom: 0;
+    font-size: 0.8rem;
   }
 
   input[type=submit] {
     width: 100%;
+    font-size: 0.8rem;
+    padding: 1em;
     background-color: hsl(223, 87%, 63%);
     color: white;
-    padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 100px;
@@ -66,8 +68,8 @@ input[type=email], select {
   }
 
   .screenshot {
-      padding-top: 50px;
-      padding-bottom:70px;
+      padding-top: 3.5em;
+      padding-bottom:5em;
   }
   
   .screenshot img{
@@ -76,21 +78,25 @@ input[type=email], select {
   }
 
   .social-media {
-      width: 150px ;
+      width: 150px;
       display: flex;
       justify-content: space-evenly;
       color: hsl(223, 87%, 63%);
   }
 
   .social-media i {
-      padding: 10px;
+      padding: 0.5em;
       border: 1px solid hsl(223, 100%, 88%);
       border-radius: 100px;
   }
 
+  .social-media i:nth-child(1) {
+      padding: 0.5em 0.7em;
+  }
+
   footer {
-      font-size: 12px;
-      padding-top: 20px;
+      font-size: 0.7rem;
+      padding-top: 2.5em;
       color: hsl(0, 0%, 59%);
   }
 
