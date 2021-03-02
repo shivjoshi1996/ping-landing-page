@@ -5,30 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/23c4beb3b8.js" crossorigin="anonymous"></script>
   <title>Frontend Mentor | Ping coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  We are launching soon!
+  <div class="wrapper">
 
-  Subscribe and get notified
+    <header>
+      <div class="logo">
+         <img src="/images/logo.svg">
+      </div>
 
-  Notify Me
+      <h1>We are launching <span style="font-weight:600">soon!</span></h1>
+      
+      <p>Subscribe and get notified</p>
+    </header>
 
-  &copy; Copyright Ping. All rights reserved.
+    <form class="newsletter" action="javascript:void(0);"">
+      <input type="email" id="email" name="email" placeholder="Your email address..." >
+      <input type="submit" id="button" value="Notify Me">
+    </form>
+    <div class="error-wrapper">
+      <p id="error"></p>
+    </div>
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+    <div class="screenshot">
+      <img src="/images/illustration-dashboard.png" alt="Screenshot of ping dashboard">
+    </div>
+
+    <div class="social-media">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+
+    <footer>
+      <p>&copy; Copyright Ping. All rights reserved.</p>
+    </footer>
+
+  </div>
 </body>
+
+<script>
+
+const email = document.querySelector('input[name=email]');
+const button = document.querySelector('#button');
+const error =  document.querySelector('#error');
+var emailForm = document.getElementById("email");
+
+const validateEmail= (email) => {
+    var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(String(email).toLowerCase());
+}
+
+button.addEventListener('click',()=>{
+    if (validateEmail(email.value)){
+      error.innerText="";
+    }else{
+      error.innerText="Please provide a valid email address";
+      emailForm.classList.add("form-error");
+    }
+})
+
+</script>
+
 </html>
